@@ -9,6 +9,7 @@ public abstract class AbstractCacheDSistema implements ICacheDSistema {
 
     private final Class<?> clase;
     private final ContenedorDInstancias contenedorDInstancias;
+    private IContenedorDCache contenedorDCache;
 
     public AbstractCacheDSistema(Class<?> clase) {
         this.clase = clase;
@@ -47,6 +48,16 @@ public abstract class AbstractCacheDSistema implements ICacheDSistema {
     @Override
     public Integer getInstanciasMaximas() {
         return 9999999;
+    }
+
+    @Override
+    public IContenedorDCache getContenedorDCache() {
+        return this.contenedorDCache;
+    }
+
+    @Override
+    public void setContenedorDCache(IContenedorDCache contenedorDCache) {
+        this.contenedorDCache = contenedorDCache;
     }
 
 }

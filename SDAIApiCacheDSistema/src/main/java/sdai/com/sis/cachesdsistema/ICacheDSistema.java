@@ -19,4 +19,8 @@ public interface ICacheDSistema {
 
     Integer getInstanciasMaximas();
 
+    IContenedorDCache getContenedorDCache();
+
+    void setContenedorDCache(IContenedorDCache contenedorDCache);
+
 }
